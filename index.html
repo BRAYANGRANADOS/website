@@ -1,0 +1,728 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/9c0a93553c.js" crossorigin="anonymous"></script>
+    
+    <title>Bootstrap</title>
+    
+
+    <style>
+
+        #subirHistoria
+        {
+            border: dashed 2px #878788;
+            background-color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+
+        }
+
+        #contenidoHistoria
+        {
+            text-align: center;
+        }
+
+        #botonAgregar
+        {
+            background-color: #eff2f7;
+            height: 60px;
+            width: 60px;
+            border-radius: 50%;
+            border:none;
+        }
+
+        #fotoPortada
+        {
+            width: 100%;
+            height: 80px;
+            border-top-left-radius: 5px;
+            border-top-right-radius: 5px;
+        }   
+
+        #fotoPerfil
+        {
+            width: 70px;
+            height: 70px;
+            border: solid 4px white;
+            margin-top: -30px;
+            border-top-left-radius: 5px;
+            border-top-right-radius: 5px;
+        }
+
+        #botonFotoPerfil
+        {
+            background-color: white;
+            border: none;
+        }
+
+        .texto
+        {
+            display: inline;
+        }
+
+        .fotoAseguir
+        {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+        }
+
+        .botonAgrgarAmigos
+        {
+            width: 40px;
+            height: 40px;
+            background-color: #e8f0fc;
+            border-radius: 50%;
+            border: none;
+        }
+
+        #btnVerMas
+        {
+            width: 100%;
+            height: 35px;
+            background-color: #e7f1fd;
+            color: #3a72e0;
+            border: none;
+        }
+
+        #escribirPesamientos
+        {
+            width: 100px;
+            height: 50px;           
+        }
+
+        #btnEstados
+        {
+            padding: 0;
+            margin: 0;
+            border: 0;
+
+            width: 100%;
+            height: 30px;
+            font-size: 15px;
+            background-color: #ebf1f5;
+            color: black;
+            border: none;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            align-items: center;
+            border-radius: 4px;
+        }
+        
+        #btnEncabezado
+        {
+            background-color: #eff0f2;
+            color: black;
+            border: none;
+        }
+
+
+
+        
+
+    </style>
+
+</head>
+
+<body class="" style="background-color: #eff2f7;">
+    <div id="navbar" class="container-fluid" style="background-color: white;">
+        <div class="container">
+            <div class="row p-2">
+                <div class="col-4">
+                    <div class="row">
+                        <div class="col-2 d-grid gap-2">
+                            <button class="btn btn-primary"><i class="fa-solid fa-bullhorn"></i></button>
+                        </div>
+                        <div class="col-10">
+                            <input type="text" class="form-control bg-light" placeholder="Buscar" name="" id="">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-8">
+                    <div class="row">
+                        <div class="col-8">
+                            <ul class="nav justify-content-end">
+                                
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">Demo</a>
+                                    <ul class="dropdown-menu">
+                                      <li><a class="dropdown-item" href="#">Inicio Predeterminado</a></li>
+                                      <li><a class="dropdown-item" href="#">Inicio clásico</a></li>
+                                      <li><a class="dropdown-item" href="#">Inicio post</a></li>
+                                      <li><a class="dropdown-item" href="#">Video Casero</a></li>
+                                      <li><a class="dropdown-item" href="#">Evento en casa</a></li>
+                                      <li><a class="dropdown-item" href="#">Página de destino</a></li>
+                                      <li><a class="dropdown-item" href="#">Descarga de la aplicación</a></li>
+                                      <li><hr class="dropdown-divider"></li>
+                                      <li><a class="dropdown-item" href="#">¡Compra Social!</a></li>
+                                    </ul>
+                                </li>
+
+                                <li class="nav-item dropdown">
+                                  <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">Páginas</a>
+                                  <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="#">Álbumes</a></li>
+                                    <li><a class="dropdown-item" href="#">Celebraciones</a></li>
+                                    <li><a class="dropdown-item" href="#">Mensajeria</a></li>
+                                    <li><a class="dropdown-item" href="#">Perfil</a></li>
+                                    <li><a class="dropdown-item" href="#">Eventos</a></li>
+                                    <li><a class="dropdown-item" href="#">Eventos 2</a></li>
+                                    <li><a class="dropdown-item" href="#">Detalles del evento</a></li>
+                                    <li><a class="dropdown-item" href="#">Detalles del evento 2</a></li>
+                                    <li><a class="dropdown-item" href="#">Grupos</a></li>
+                                    <li><a class="dropdown-item" href="#">Detalles del grupo</a></li>
+                                    <li><a class="dropdown-item" href="#">Publicar videos</a></li>
+                                    <li><a class="dropdown-item" href="#">Detalles de la publicacion</a></li>
+                                    <li><a class="dropdown-item" href="#">Detalles del video</a></li>
+                                    <li><a class="dropdown-item" href="#">Blog</a></li>
+                                    <li><a class="dropdown-item" href="#">Detalles del blog</a></li>
+                                    
+                                    <li><hr class="dropdown-divider"></li>
+                                    <li><a class="dropdown-item" href="#">Niveles Despegables</a></li>
+                                  </ul>
+                                </li>
+
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">Cuenta</a>
+                                    <ul class="dropdown-menu">
+                                      <li><a class="dropdown-item" href="#">Crear una pagina</a></li>
+                                      <li><a class="dropdown-item" href="#">Configuracion</a></li>
+                                      <li><a class="dropdown-item" href="#">Notificaiones</a></li>
+                                      <li><a class="dropdown-item" href="#">Centro de ayuda</a></li>
+                                      <li><a class="dropdown-item" href="#">Detalles de la ayuda</a></li>
+                                      <li><a class="dropdown-item" href="#">Autentificacion</a></li>
+                                      <li><a class="dropdown-item" href="#">Privacidad y terminos</a></li>
+                                      <li><a class="dropdown-item" href="#">Error 404</a></li>
+                                    </ul>
+                                </li>
+
+
+                                <li class="nav-item">
+                                  <a class="nav-link" href="#" tabindex="-1" aria-disabled="true">Mi Red</a>
+                                </li>
+                              </ul>
+                        </div>
+                    
+                        <div class="col-4">
+                            <div class="row">
+                                <div class="col-3 d-grip gap-2"><button class="btn btn-secondary" id="btnEncabezado">
+                                    <i class="fa-solid fa-message"></i>
+                                </button></div>
+
+                                <div class="col-3 d-grip gap-2"><button class="btn btn-secondary" id="btnEncabezado">
+                                    <i class="fa-solid fa-gear"></i>
+                                </button></div>
+                                
+                                <div class="col-3 d-grip gap-2">
+                                    <button type="button" class="btn btn-primary position-relative" id="btnEncabezado"> 
+                                        <i class="fa-solid fa-bell"></i>
+                                        <span class="position-absolute top-0 start-100 translate-middle p-2 bg-danger border border-light rounded-circle">
+                                          <span class="visually-hidden">New alerts</span>
+                                        </span>
+                                    </button>
+                                </div>
+
+                                <div class="col-3 d-grip gap-2"><button class="btn btn-secondary" id="btnEncabezado">
+                                    <img src="https://social.webestica.com/assets/images/avatar/07.jpg" alt="" style="width: 25px; height: 25px;">
+                                </button></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluid mt-4">
+        <div class="container">
+            <div class="row p-2">
+
+               
+                <div class="col-3">
+
+                    <div class="card" style="height: 400px;">
+                       
+                        <div class="row">
+                            <div class="col">
+                                <img src="https://social.webestica.com/assets/images/bg/01.jpg" alt="" id="fotoPortada">
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col">
+                                <center>
+                                    <button id="botonFotoPerfil"><img src="https://social.webestica.com/assets/images/avatar/07.jpg" alt="" id="fotoPerfil"></button>
+                                   
+                                </center>
+                            </div>
+                        </div>
+                        
+                        <div class="row">
+                            <div class="col" style="text-align: center;">
+                                <b><p class="texto" style="font-size: 25px;">Sam Lanson</p></b>
+                                <br>
+                                <p class="texto" style="color: #a9a3ae">Desarrollador Web en Webestica</p>
+                                <br>
+                                <br>
+                                <p class="texto" style="color:#a9a3ae">Me encantaría cambiar el</p>
+                                <br>
+                                <p class="texto" style="color:#a9a3ae">mundo, pero no me darán el</p>
+                                <br>
+                                <p class="texto" style="color:#a9aaae">código fuente.</p>
+                                <br>
+                                <br>
+                            </div>
+                        </div>
+
+                        <div class="row" style="text-align: center;">
+                            <div class="col-4">
+                                <b>256</b>
+                            </div>
+                            <div class="col-4">
+                                <b>2,5 MIL</b>
+                            </div>
+                            <div class="col-4">
+                                <b>365</b>
+                            </div>
+                        </div>
+
+                        <div class="row" style="text-align: center;">
+                            <div class="col-4" style="font-size: 12px;">
+                                <p>Pots</p>
+                            </div>
+                            <div class="col-4" style="font-size: 12px;">
+                                <p>Seguidores</p>
+                                
+                            </div>
+                            <hr>
+                            <div class="container">
+                                <div class="row mt-2"><a href="#"><img src="casa.png" width="20px"> Feed</a></div>
+                                <div class="row mt-2"><a href=""><img src="nino.png" width="20px">Connections</a></div>
+                                <div class="row mt-2"><a href="#"><img src="earth.png" width="20px"> Latest News</a></div>
+                                <div class="row mt-2"><a href="#"><img src="calendar.png" width="20px"> Events</a></div>
+                                <div class="row mt-2"><a href="#"><img src="chat.png" width="20px"> Groups</a></div>
+                                <div class="row mt-2"><a href="#"><img src="bell.png" width="20px"> Notification</a></div>
+                                <div class="row mt-2"><a href="#"><img src="gear.png" width="20px"> Settings</a></div>
+                            </div>
+                            <hr>
+                            <div class="col-4" style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">
+                                <p>Siguiendo</p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+
+                <div class="col-6">
+
+                    <div class="row" style="background-color: #eff2f7; height: 150px;">
+                        
+                        <div class="col-3" id="subirHistoria">
+                            <button id="botonAgregar"><i class="fa-solid fa-plus"></i></button>
+                            <div id="contenidoHistoria">
+                                <p>Publicar una historia</p>
+                            </div>
+                        </div>
+
+                        <div class="col-3">
+                            <img src="Historia1.jpg" class="rounded float-start" alt="" style="height: 150px; width: 120px;">
+                        </div>
+                        <div class="col-3">
+                            <img src="Historia2.jpg" class="rounded float-end" alt="" style="height: 150px; width: 100px;"> 
+                        </div>
+                        <div class="col-3">
+                            <img src="Historia3.jpg" class="rounded float-end" alt="" style="height: 150px; width: 100px;"> 
+                        </div>
+                        
+                    </div>
+
+                    <div class="row mt-4" style="background-color: white; height: 226px;" >
+                        <div class="card-body p-4">
+                            <br>
+                        
+                            <div class="row" style="justify-content: center;">
+                                <div class="col-3">
+                                    <img src="https://social.webestica.com/assets/images/avatar/03.jpg" alt="" class="fotoAseguir">
+                                </div>
+                                <div class="col-9" style="text-align: center; margin-left: -40px; margin-top: 10px;">
+                                    <div class="input-group mb-3">
+                                        <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" id="#escribirPesamientos" placeholder="Comparte tus pensamientos..." style="border: none;">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <br>
+                            <br>
+        
+                            <div class="row">
+
+                                <div class="col-2">
+                                        <!-- Button trigger modal -->
+                                    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal1" id="btnEstados">
+                                        
+                                        <div><i class="fa-solid fa-image" style="color: #2eb08e"></i></div>
+                                        <div>Foto</div>
+                                 
+                                    </button>
+                                    
+                                    <!-- Modal -->
+                                    <div class="modal fade" id="exampleModal1" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                        <div class="modal-dialog">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                            <h5 class="modal-title" id="exampleModalLabel">Añadir foto de publicaión</h5>
+                                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                            </div>
+                                            <div class="modal-body">
+                                                <input type="file" name="" id="">
+                                            </div>
+                                            <div class="modal-footer">
+                                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                                            <button type="button" class="btn btn-primary">Guardar Cambios</button>
+                                            </div>
+                                        </div>
+                                        </div>
+                                    </div>
+
+                                    
+                                </div> <!--Fin de la primera columan-->
+
+
+                                <div class="col-2">
+
+                                    <!-- Button trigger modal -->
+                                    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal2" id="btnEstados">
+                                        
+                                        <div><i class="fa-solid fa-video" style="color: #4e9ffa"></i></div>
+                                        <div>Video</div>
+                                 
+                                    </button>
+                                    
+                                    <!-- Modal -->
+                                    <div class="modal fade" id="exampleModal2" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                        <div class="modal-dialog">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                            <h5 class="modal-title" id="exampleModalLabel">Añadir video a la publicación</h5>
+                                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                            </div>
+                                            <div class="modal-body">
+                                                <input type="file" name="" id="" style="width: 100%; height: 100px;" >
+                                            </div>
+                                            <div class="modal-footer">
+                                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                                            <button type="button" class="btn btn-primary">Guardar Cambios</button>
+                                            </div>
+                                        </div>
+                                        </div>
+                                    </div>
+
+
+                                </div>
+
+                                <div class="col-2">
+
+                                  
+                                     <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal3" id="btnEstados">
+                                        
+                                        <div><i class="fa-solid fa-calendar-day" style="color: #d6283c;"></i></div>
+                                        <div>Evento</div>
+                                 
+                                    </button>
+                                    
+                                  
+                                    <div class="modal fade" id="exampleModal3" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                        <div class="modal-dialog">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                            <h5 class="modal-title" id="exampleModalLabel">Crear Evento</h5>
+                                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                            </div>
+                                            <div class="modal-body"><!--Aquí se pondrá el formulario para guardar un evento -->
+                                                
+                                                <form class="row g-3">
+                                                    <div class="col-md-12">
+                                                      <label for="inputEmail4" class="form-label">Titulo</label>
+                                                      <input type="text" class="form-control" id="inputEmail4">
+                                                    </div>
+                                                    
+                                                    <div class="col-12">
+                                                      <label for="inputAddress" class="form-label">Descripción</label>
+                                                      <input type="text" class="form-control" id="inputAddress" placeholder="Ej: Temas, horaios, etc.">
+                                                    </div>
+                                                   
+                                                    <div class="col-md-4">
+                                                      <label for="inputCity" class="form-label">Fecha</label>
+                                                      <input type="date" class="form-control" id="inputCity">
+                                                    </div>
+                                                    <div class="col-md-4">
+                                                      <label for="inputState" class="form-label">Hora</label>
+                                                      <input type="time" class="form-control" id="inputCity">
+                                                      </select>
+                                                    </div>
+                                                    <div class="col-md-4">
+                                                      <label for="inputZip" class="form-label">Duración</label>
+                                                      <input type="text" class="form-control" id="inputZip" placeholder="1h 23m">
+                                                    </div>
+
+                                                    <div class="col-12">
+                                                        <label for="inputAddress2" class="form-label">Ubicación</label>
+                                                        <input type="text" class="form-control" id="inputAddress2" placeholder="San Miguel, ES 1234">
+                                                    </div>
+
+                                                    <div class="col-12">
+                                                        <label for="inputAddress2" class="form-label">Anñadir Invitados</label>
+                                                        <input type="email" class="form-control" id="inputAddress2" placeholder="Correo electronico de invitado">
+                                                    </div>
+
+                                                    
+                                                    <div class="col-12">
+                                                        <label for="inputAddress2" class="form-label">Cargar un archivo</label>
+                                                        <input type="file" class="form-control" id="inputAddress2">
+                                                    </div>
+
+                                                
+                                                </form>
+
+                                            </div>
+                                            <div class="modal-footer">
+                                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                                            <button type="button" class="btn btn-primary">Guardar Cambios</button>
+                                            </div>
+                                        </div>
+                                        </div>
+                                    </div>
+
+
+                                </div>
+
+
+                                <div class="col-5">
+
+                                     
+                                     <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal4" id="btnEstados">
+                                        
+                                        <div><i class="fa-solid fa-face-grin" style="color: #fbcb5b;"></i></div>
+                                        <div>Sensación/actividad</div>
+                                 
+                                    </button>
+                                    
+                                    
+                                    <div class="modal fade" id="exampleModal4" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                        <div class="modal-dialog">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                            <h5 class="modal-title" id="exampleModalLabel">Crear publicacion</h5>
+                                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                            </div>
+                                            <div class="modal-body">
+                                                <div class="row">
+                                                    <div class="col-2">
+                                                        <img src="https://social.webestica.com/assets/images/avatar/03.jpg" alt="" class="fotoAseguir">
+                                                    </div>
+                                                   
+                                                    
+                                                    <div class="col-10">
+                                                        <p><h4>Escriba sus pensamientos</h4></p>
+                                                        <textarea name="" id="" cols="45" rows="8" placeholder="Escribe tus pensamientos">
+
+                                                        </textarea>
+                                                    </div>
+                                                </div>
+
+                                                <br>
+                                                <br>
+
+                                                <div class="row">
+                                                    
+                                                    <div class="col-2">
+                                                        <button class="botonAgrgarAmigos">
+                                                            <i class="fa-solid fa-image" style="color: #2eb08e"></i>
+                                                        </button>
+                                                    </div>
+
+                                                    <div class="col-2">
+                                                        <button class="botonAgrgarAmigos">
+                                                            <i class="fa-solid fa-video" style="color: #4e9ffa"></i>
+                                                        </button>
+                                                    </div>
+
+                                                    <div class="col-2">
+                                                        <button class="botonAgrgarAmigos">
+                                                            <i class="fa-solid fa-calendar-day" style="color: #d6283c;"></i>
+                                                        </button>
+                                                    </div>
+
+                                                    <div class="col-2">
+                                                        <button class="botonAgrgarAmigos">
+                                                            <i class="fa-solid fa-face-grin" style="color: #fbcb5b;"></i>
+                                                        </button>
+                                                    </div>
+
+                                                    <div class="col-2">
+                                                        <button class="botonAgrgarAmigos">
+                                                            <i class="fa-solid fa-location-dot"></i>
+                                                        </button>
+                                                    </div>
+
+                                                    <div class="col-2">
+                                                        <button class="botonAgrgarAmigos">
+                                                            <i class="fa-solid fa-tag" style="color: #4a47f0;"></i>
+                                                        </button>
+                                                    </div>
+
+                                                </div>
+
+                                            </div>
+                                            <div class="modal-footer">
+                                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                                            <button type="button" class="btn btn-primary">Guardar Cambios</button>
+                                            </div>
+                                        </div>
+                                        </div>
+                                    </div>
+
+
+                                </div> 
+                                <div class="col-1"></div>
+                                
+                            </div>
+                    
+
+                        </div> 
+                        
+                        
+                    </div>
+                </div>
+
+
+                <div class="col-3">
+                    <div class="card" style="height: 500px;">
+                        <div class="card-body">
+                            <p><h4>A quien Seguir</h4></p>
+                            <div class="row">
+                                <div class="col-3">
+                                    <img src="https://social.webestica.com/assets/images/avatar/04.jpg" alt="" class="fotoAseguir">
+                                </div>
+                                <div class="col-6">
+                                    <p class="texto" style="font-size: 15px;">
+                                        <b>Judy Nguyen</b>
+                                    </p>
+                                    <p class="texto" style="font-size: 12px;">
+                                        Presentador de...
+                                    </p>
+                                </div>
+                                <div class="col-3">
+                                    <button class="botonAgrgarAmigos">
+                                        <i class="fa-solid fa-plus" style="color: #3e78d0;"></i>
+                                    </button>
+                                </div>
+                            </div>
+                            <br>
+
+                            <div class="row">
+                                <div class="col-3">
+                                    <img src="https://social.webestica.com/assets/images/avatar/05.jpg" alt="" class="fotoAseguir">
+                                </div>
+                                <div class="col-6">
+                                    <p class="texto" style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">
+                                        <b>Amanda Reed</b>
+                                    </p>
+                                    <p class="texto" style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">
+                                        Desarrollador Web
+                                    </p>
+                                </div>
+                                <div class="col-3">
+                                    <button class="botonAgrgarAmigos">
+                                        <i class="fa-solid fa-plus" style="color: black"></i>
+                                    </button>
+                                </div>
+                            </div>
+                            <br>
+
+                            <div class="row">
+                                <div class="col-3">
+                                    <img src="https://social.webestica.com/assets/images/avatar/11.jpg" alt="" class="fotoAseguir">
+                                </div>
+                                <div class="col-6">
+                                    <p class="texto" style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">
+                                        <b>Billy Vásquez</b>
+                                    </p>
+                                    <p class="texto" style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">
+                                        Presentador de...
+                                    </p>
+                                </div>
+                                <div class="col-3">
+                                    <button class="botonAgrgarAmigos" style="background-color: #0d6df2; ">
+                                        <i class="fa-solid fa-user-check" style="color: white;"></i>
+                                    </button>
+                                </div>
+                            </div>
+                            <br>
+        
+                            <div class="row">
+                                <div class="col-3">
+                                    <img src="https://social.webestica.com/assets/images/avatar/01.jpg" alt="" class="fotoAseguir">
+                                </div>
+                                <div class="col-6">
+                                    <p class="texto" style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">
+                                        <b>Lori Ferguson</b>
+                                    </p>
+                                    <p class="texto" style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">
+                                        Desarrollador Web
+                                    </p>
+                                </div>
+                                <div class="col-3">
+                                    <button class="AgrgarAmigos">
+                                        <i class="fa-solid fa-plus" style="color: #3e78d0;"></i>
+                                    </button>
+                                </div>
+                            </div>
+                            <br>
+
+                            <div class="row">
+                                <div class="col-3">
+                                    <img src="https://social.webestica.com/assets/images/avatar/placeholder.jpg" alt="" class="fotoAseguir">
+                                </div>
+                                <div class="col-6">
+                                    <p class="texto" style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">
+                                        <b>Carolyn Ortiz</b>
+                                    </p>
+                                    <p class="texto" style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">
+                                        Presentador de...
+                                    </p>
+                                </div>
+
+                                <div class="col-3">
+                                    <button class="botonAgrgarAmigos">
+                                        <i class="fa-solid fa-plus" style="color: #3e78d0;"></i>
+                                    </button>
+                                </div>
+                            </div>
+
+                            <br>
+
+                            <div class="row">
+                                <div class="col" style="text-align: center;">
+                                    <button type="button" class="btn btn-primary btn-sm" id="btnVerMas">Ver más</button>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</body>
+</html>
